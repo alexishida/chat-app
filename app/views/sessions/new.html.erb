@@ -1,0 +1,10 @@
+<div class="container mx-auto p-4 max-w-sm text-center">
+  <h1 class="text-3xl font-bold mb-6">Login</h1>
+  <%= form_with(scope: :session, url: login_path, local: true, class: "space-y-4") do |f| %>
+    <div>
+      <%= f.label :name, "Nome de Usuário", class: "block text-left font-medium text-gray-700" %>
+      <%= f.text_field :name, class: "w-full p-2 mt-1 border rounded-lg", required: true %>
+    </div>
+    <%= f.submit "Entrar", class: "w-full py-3 px-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md cursor-pointer" %>
+  <% end %>
+</div>
